@@ -1,0 +1,13 @@
+ipeps_wapi_user:
+    resource: "@IpepsWapiUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+ipeps_wapidemo:
+    resource: "@IpepsWapiDemoBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

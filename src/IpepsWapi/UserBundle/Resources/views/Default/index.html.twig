@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Accueil
+{% endblock %}
+
+{% block body %}
+    <h1>Liste des utilisateurs</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {% for users in userList %}
+            <td>{{ users.nom }}</td>
+            <td>{{ users.prenom }}</td>
+            <td><a href="userDetail.html.twig/{{ users.id }}">détail</a> </td>
+            {% endfor %}
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

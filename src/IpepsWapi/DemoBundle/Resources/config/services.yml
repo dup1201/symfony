@@ -1,0 +1,4 @@
+services:
+#    ipeps_wapi_demo.example:
+#        class: IpepsWapi\DemoBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

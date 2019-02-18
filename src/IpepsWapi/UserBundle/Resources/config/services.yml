@@ -1,6 +1,7 @@
 services:
   userDao:
-    class: IpepsWapi\UserBundle\Dao
+    class: IpepsWapi\UserBundle\Dao\UserDao
+    arguments: ["@my_pdo"]
     public: true
 #    ipeps_wapi_user.example:
 #        class: IpepsWapi\UserBundle\Example

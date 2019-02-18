@@ -11,9 +11,10 @@ namespace IpepsWapi\UserBundle\Dao;
 
 class UserDao
 {
-    public function __construct()
+    protected $pdo;
+    public function __construct(\PDO $pdo)
     {
-
+        $this->pdo = $pdo;
     }
 
     /**
@@ -21,10 +22,10 @@ class UserDao
      */
     public function findAll()
     {
-        $myPdo = $this->get('my_pdo');
+        $pdo=$this->pdo;
         $sql = "SELECT id, nom, prenom, email, telephone FROM users";
 
-        $statement = $myPdo->query($sql);
+        $statement = $pdo->query($sql);
 
 
         while (false !== ($row = $statement->fetch(\PDO::FETCH_ASSOC))) {

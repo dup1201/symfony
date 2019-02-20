@@ -3,17 +3,19 @@
 namespace IpepsWapi\DemoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Index;
 
 /**
  * utilisateur
  *
  *
  * @ORM\Entity(repositoryClass="IpepsWapi\DemoBundle\Repository\utilisateurRepository")
- * @ORM\Table(name="utilisateur"),
+ * @ORM\Table(name="utilisateur",
  * indexes={
-
- * @index(name="email_index", columns={"email"}),
- * @index(name="nom_prenom_index", columns={"nom", "prenom"})}
+ * @Index(name="email_index", columns={"email"}),
+ * @Index(name="nom_prenom_index", columns={"nom", "prenom"})
+ * }// fin de l'indexes
+ * )// fin de Table
  */
 class utilisateur
 {

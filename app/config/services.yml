@@ -7,7 +7,7 @@ services:
     my_pdo:
         class: PDO
         arguments: ['mysql:dbname=%database_name%;host=%database_host%;charset=utf8', '%database_user%', '%database_password%']
-        public: false
+        public: true
     # default configuration for services in *this* file
     _defaults:
         # automatically injects dependencies in your services

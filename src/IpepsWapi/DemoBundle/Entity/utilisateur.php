@@ -14,8 +14,8 @@ use Doctrine\ORM\Mapping\Index;
  * indexes={
  * @Index(name="email_index", columns={"email"}),
  * @Index(name="nom_prenom_index", columns={"nom", "prenom"})
- * }// fin de l'indexes
- * )// fin de Table
+ * }
+ * )
  */
 class utilisateur
 {

@@ -1,3 +1,8 @@
+ipeps_wapi_doctrine_test:
+    resource: "@IpepsWapiDoctrineTestBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 ipeps_wapi_user:
     resource: "@IpepsWapiUserBundle/Controller/"
     type:     annotation

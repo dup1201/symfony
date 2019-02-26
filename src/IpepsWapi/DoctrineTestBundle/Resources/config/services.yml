@@ -1,0 +1,4 @@
+services:
+#    ipeps_wapi_doctrine_test.example:
+#        class: IpepsWapi\DoctrineTestBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

@@ -19,7 +19,7 @@
         <tr>
             <td>{{ users.nom }}</td>
             <td>{{ users.prenom }}</td>
-            <td><a href="">détail</a> </td>
+            <td><a href="{{ path('userDetail', {"id":users.id}) }}">détail</a> </td>
         </tr>
         {% endfor %}
         </tbody>

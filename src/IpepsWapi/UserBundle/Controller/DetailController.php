@@ -15,14 +15,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class DetailController extends Controller
 {
     /**
-     * @Route("/userDetail", name="userDetail")
+     * @Route("/userDetail/{id}", name="userDetail")
      *
      */
-    public function userDetailAction()
+    public function userDetailAction($id)
     {
         $user= $this->container->get('userDao');
-        $userId = (int)$_GET['id'];
-        $userList=$user->findById($userId);
-        return $this->render('@IpepsWapiUser/Default/userDetail.html.twig',array('userDetail'=>$userList));
+        $userList=$user->findById($id);
+        return $this->render('@IpepsWapiUser/Default/userDetail.html.twig',compact('userList'));
     }
 }

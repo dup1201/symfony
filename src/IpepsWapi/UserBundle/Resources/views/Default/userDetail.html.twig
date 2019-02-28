@@ -4,10 +4,10 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Détail de {{ users.nom }} {{ users.prenom }}</h1>
+    <h1>Détail de {{ userList.nom }} {{ userList.prenom }}</h1>
 
-    <p>Nom : {{ userDetail.nom }}</p>
-    <p>Prénon : {{ users.prenom }}</p>
-    <p>Email : {{ users.email }}</p>
-    <p>Téléphone : {{ users.telephone }}</p>
+    <p>Nom : {{ userList.nom }}</p>
+    <p>Prénon : {{ userList.prenom }}</p>
+    <p>Email : {{ userList.email }}</p>
+    <p>Téléphone : {{ userList.telephone }}</p>
 {% endblock %}

@@ -46,7 +46,7 @@ class UserDao
         $row = $preparedStatement->fetch(\PDO::FETCH_ASSOC);
         if($row === false)
             return null;
-        $results[] = $row;
+        $results = $row;
         return $results;
 
     }

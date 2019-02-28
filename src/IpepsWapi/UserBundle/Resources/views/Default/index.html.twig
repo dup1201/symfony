@@ -15,13 +15,13 @@
         </tr>
         </thead>
         <tbody>
+        {% for users in userList %}
         <tr>
-            {% for users in userList %}
             <td>{{ users.nom }}</td>
             <td>{{ users.prenom }}</td>
-            <td><a href="userDetail.html.twig/{{ users.id }}">détail</a> </td>
-            {% endfor %}
+            <td><a href="">détail</a> </td>
         </tr>
+        {% endfor %}
         </tbody>
     </table>
 {% endblock %}

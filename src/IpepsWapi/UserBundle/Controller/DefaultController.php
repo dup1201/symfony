@@ -4,7 +4,7 @@ namespace IpepsWapi\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
-use IpepsWapi\UserBundle\Dao\UserDao;
+
 
 
 class DefaultController extends Controller
@@ -16,7 +16,7 @@ class DefaultController extends Controller
     {
         $user= $this->container->get('userDao');
         $userList=$user->findAll();
-        return $this->render('@IpepsWapiUser/Default/index.html.twig');
+        return $this->render('@IpepsWapiUser/Default/index.html.twig',array('userList'=>$userList));
     }
 
 
